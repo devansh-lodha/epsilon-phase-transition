@@ -31,7 +31,7 @@ def run() -> None:
         results[eps] = history["sim_l2"]
 
     # Visualization
-    result = get_fig_ax(layout="wide", twin_x=False)
+    result = get_fig_ax(layout="column", twin_x=False)
     fig, ax = result[0], result[1]
 
     for (eps, history_l2), color in zip(results.items(), colors, strict=True):

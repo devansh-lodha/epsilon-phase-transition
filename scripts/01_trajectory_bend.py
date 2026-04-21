@@ -27,7 +27,7 @@ def run() -> None:
     history = train_model(x, y, w, opt, epochs=25000, w_l2_oracle=w_l2, w_linf_oracle=w_linf)
 
     # Visualization
-    result = get_fig_ax(layout="wide", twin_x=True)
+    result = get_fig_ax(layout="column", twin_x=True)
     # Type hinting workaround for unpack
     fig, ax1, ax2 = result[0], result[1], result[2]  # type: ignore
 
@@ -53,10 +53,10 @@ def run() -> None:
     ax1.legend(
         lines_1 + lines_2,
         labels_1 + labels_2,
-        loc="center",
-        bbox_to_anchor=(0.8, 0.7),  # Adjust these decimals! 0.5 is middle.
+        loc="lower left",             # Anchors the bottom-left corner of the legend box
+        bbox_to_anchor=(0.05, -0.02),  # Places it slightly off the bottom-left corner axes
     )
-
+     
     fig.suptitle(
         r"$\mathcal{L}_\infty \to \mathcal{L}_2$ Transition in AdamW",
         fontweight="bold",

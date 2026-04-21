@@ -46,7 +46,7 @@ def run() -> None:
         results[name] = (history["sim_l2"], color)
 
     # Visualization
-    result = get_fig_ax(layout="wide", twin_x=False)
+    result = get_fig_ax(layout="column", twin_x=False)
     fig, ax = result[0], result[1]
 
     for name, (history_l2, color) in results.items():
