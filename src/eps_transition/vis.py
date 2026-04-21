@@ -63,8 +63,11 @@ def get_fig_ax(
 
     if twin_x:
         ax2 = ax.twinx()
-        # Ensure the twin axis also drops the top spine
+        # Keep top open, but RESTORE the right spine for the secondary y-axis
         ax2.spines["top"].set_visible(False)
+        ax2.spines["right"].set_visible(True)
+        ax2.spines["right"].set_color(COLORS["text"])
+        ax2.spines["right"].set_linewidth(1.0)
         return fig, ax, ax2
 
     return fig, ax
