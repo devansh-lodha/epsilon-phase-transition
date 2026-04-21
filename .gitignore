@@ -1,0 +1,18 @@
+# Environments
+.venv/
+env/
+venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# NOTE: We specifically DO NOT ignore the `results/` folder
+# because we want our final plots tracked in version control.
