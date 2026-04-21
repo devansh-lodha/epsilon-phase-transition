@@ -1,4 +1,4 @@
-# Epsilon-Driven $L_\infty$ to $L_2$ Geometric Phase Transitions in Adaptive Optimizers
+# Epsilon-Driven $\mathcal{L}_{\infty}$ to $L_2$ Geometric Phase Transitions in Adaptive Optimizers
 
 ## Core Thesis
 Current theoretical analyses of adaptive optimizers treat the stability parameter $\epsilon$ as a passive numerical safeguard. This repository provides mathematical and empirical proof that $\epsilon$ acts as the engine of a deterministic geometric phase transition in the loss landscape.
@@ -11,7 +11,7 @@ Isolating the preconditioner, the Adam update can be factored as:
 $$ \Delta w_t = - \frac{\eta}{\epsilon} \left( \frac{1}{\rho_t + 1} \right) \hat{m}_t $$
 
 This formulation yields three distinct optimization phases:
-1. Phase 1 ($\mathcal{L}_\infty$ Regime, $\rho_t \gg 1$): The variance buffer dominates. The update mimics SignGD, maximizing the $\mathcal{L}_\infty$ margin.
+1. Phase 1 ($\mathcal{L}_{\infty}$ Regime, $\rho_t \gg 1$): The variance buffer dominates. The update mimics SignGD, maximizing the $\mathcal{L}_\infty$ margin.
 2. Phase 2 (The Collapse, $v_t \to 0$): As the model separates the data, gradients decay exponentially.
 3. Phase 3 ($\mathcal{L}_2$ Regime, $\rho_t \ll 1$): $\epsilon$ dominates the preconditioner. The update collapses into heavy-ball SGD, aggressively curving toward the $\mathcal{L}_2$ max-margin.
 
